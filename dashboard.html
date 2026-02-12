@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your SecureTransfer Dashboard - View balance and transactions">
+    <title>Dashboard - SecureTransfer</title>
+    
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ================================
+         NAVIGATION BAR
+         ================================ -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-logo">SecureTransfer</a>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="transfer.html">Send Money</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================================
+         DASHBOARD SECTION
+         Main user dashboard area
+         ================================ -->
+    <section class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Your Dashboard</h1>
+                <p>Welcome back, Student! Here's your account overview.</p>
+            </div>
+
+            <!-- Educational Notice -->
+            <div class="disclaimer">
+                <strong>🎓 DEMO ACCOUNT</strong>
+                <p>
+                    This is a simulated account with virtual funds. All data shown is for 
+                    educational purposes only. No real money is involved.
+                </p>
+            </div>
+
+            <!-- Balance Card -->
+            <div class="balance-card">
+                <div class="balance-label">Available Balance</div>
+                
+                <!-- Static virtual balance - this is hardcoded, not from a database -->
+                <div class="balance-amount">$10,000.00</div>
+                
+                <p style="color: var(--neutral-light); margin-bottom: 1.5rem;">
+                    Virtual funds for practicing international transfers
+                </p>
+                
+                <!-- Action Button -->
+                <a href="transfer.html" class="btn btn-success">
+                    <span>💸 Send Money</span>
+                </a>
+            </div>
+
+            <!-- Recent Transactions Section -->
+            <div class="transactions-section">
+                <h2>Recent Transactions</h2>
+                
+                <!-- Transaction Table -->
+                <div class="transaction-table">
+                    <table>
+                        <!-- Table Header -->
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Country</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        
+                        <!-- Table Body - Dummy/Static Data -->
+                        <tbody>
+                            <!-- Transaction 1 -->
+                            <tr>
+                                <td>Feb 12, 2026</td>
+                                <td>Transfer to Maria Garcia</td>
+                                <td>🇲🇽 Mexico</td>
+                                <td class="amount-negative">-$500.00</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                            </tr>
+                            
+                            <!-- Transaction 2 -->
+                            <tr>
+                                <td>Feb 10, 2026</td>
+                                <td>Received from John Smith</td>
+                                <td>🇺🇸 USA</td>
+                                <td class="amount-positive">+$1,200.00</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                            </tr>
+                            
+                            <!-- Transaction 3 -->
+                            <tr>
+                                <td>Feb 8, 2026</td>
+                                <td>Transfer to Yuki Tanaka</td>
+                                <td>🇯🇵 Japan</td>
+                                <td class="amount-negative">-$750.00</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                            </tr>
+                            
+                            <!-- Transaction 4 -->
+                            <tr>
+                                <td>Feb 5, 2026</td>
+                                <td>Transfer to Pierre Dubois</td>
+                                <td>🇫🇷 France</td>
+                                <td class="amount-negative">-$300.00</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                            </tr>
+                            
+                            <!-- Transaction 5 -->
+                            <tr>
+                                <td>Feb 3, 2026</td>
+                                <td>Received from Emma Wilson</td>
+                                <td>🇬🇧 UK</td>
+                                <td class="amount-positive">+$2,000.00</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                            </tr>
+                            
+                            <!-- Transaction 6 -->
+                            <tr>
+                                <td>Feb 1, 2026</td>
+                                <td>Transfer to Raj Patel</td>
+                                <td>🇮🇳 India</td>
+                                <td class="amount-negative">-$450.00</td>
+                                <td><span class="status-badge status-completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Quick Actions Grid -->
+            <div style="margin-top: 3rem;">
+                <h2 class="section-title" style="font-size: 1.8rem; text-align: left;">Quick Actions</h2>
+                
+                <div class="feature-grid" style="margin-top: 1.5rem;">
+                    <!-- Action 1: Send Money -->
+                    <div class="feature-card">
+                        <span class="feature-icon">💸</span>
+                        <h3>Send Money</h3>
+                        <p>
+                            Transfer virtual funds to any country. Practice international 
+                            money transfers securely.
+                        </p>
+                        <a href="transfer.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">
+                            <span>Start Transfer</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Action 2: View History -->
+                    <div class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3>Transaction History</h3>
+                        <p>
+                            Review all your past transactions and learn how transaction 
+                            tracking works in financial systems.
+                        </p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">
+                            <span>View All</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Action 3: Security Settings -->
+                    <div class="feature-card">
+                        <span class="feature-icon">🔒</span>
+                        <h3>Security Center</h3>
+                        <p>
+                            Learn about password security, two-factor authentication, 
+                            and protecting your financial accounts.
+                        </p>
+                        <a href="security.html" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Tips Section -->
+            <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="tip-box">
+                    <strong>💡 Security Tips for Your Account:</strong>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                        <li>Always verify the URL before entering credentials (look for HTTPS)</li>
+                        <li>Never share your password, even with support staff</li>
+                        <li>Enable two-factor authentication for additional security</li>
+                        <li>Review your transaction history regularly for unauthorized activity</li>
+                        <li>Use strong, unique passwords for each financial service</li>
+                        <li>Be cautious of phishing emails requesting personal information</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Understanding Your Dashboard -->
+            <div style="margin-top: 3rem;">
+                <h2 class="section-title" style="font-size: 1.8rem;">Understanding Your Dashboard</h2>
+                
+                <div class="education-card" style="margin-top: 1.5rem;">
+                    <h3 style="color: var(--primary-cyan);">What You're Seeing</h3>
+                    <p>
+                        This dashboard simulates a real banking interface where users can monitor their 
+                        account balance and transaction history. In a production system:
+                    </p>
+                    
+                    <ul style="margin-top: 1rem;">
+                        <li>
+                            <strong>Balance:</strong> Would be retrieved from a secure database in real-time, 
+                            protected by encryption and access controls.
+                        </li>
+                        <li>
+                            <strong>Transactions:</strong> Would be stored with cryptographic signatures to 
+                            prevent tampering and maintain an audit trail.
+                        </li>
+                        <li>
+                            <strong>User Session:</strong> Would be managed with secure tokens (like JWT) 
+                            that expire after a period of inactivity.
+                        </li>
+                        <li>
+                            <strong>Communication:</strong> All data would be transmitted over HTTPS, 
+                            encrypting information between your browser and the server.
+                        </li>
+                    </ul>
+                    
+                    <div class="tip-box" style="margin-top: 1.5rem;">
+                        <strong>🎯 Learning Objective:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            By exploring this dashboard, you're learning how financial platforms organize 
+                            and present user data securely. Pay attention to how information is structured 
+                            and what security indicators are present (HTTPS, logout options, transaction details).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About SecureTransfer</h3>
+                    <p>
+                        An educational platform designed to teach cybersecurity concepts through 
+                        simulated international money transfers.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="transfer.html">Send Money</a></li>
+                        <li><a href="security.html">Security Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning Resources</h3>
+                    <ul>
+                        <li><a href="security.html#passwords">Password Security</a></li>
+                        <li><a href="security.html#phishing">Phishing Prevention</a></li>
+                        <li><a href="security.html#encryption">Encryption Basics</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 SecureTransfer Educational Platform. For learning purposes only.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

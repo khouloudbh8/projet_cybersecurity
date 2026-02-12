@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send money internationally - Educational platform">
+    <title>Send Money - SecureTransfer</title>
+    
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ================================
+         NAVIGATION BAR
+         ================================ -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">SecureTransfer</a>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="transfer.html" class="active">Send Money</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================================
+         TRANSFER FORM SECTION
+         International money transfer form
+         ================================ -->
+    <section class="features">
+        <div class="container">
+            <!-- Educational Notice -->
+            <div class="disclaimer">
+                <strong>💰 VIRTUAL TRANSFER</strong>
+                <p>
+                    This is a simulated transfer. No real money will be sent. 
+                    Practice secure international money transfers safely.
+                </p>
+            </div>
+
+            <!-- Transfer Form Container -->
+            <div class="transfer-container">
+                <h2>Send Money Internationally</h2>
+                
+                <!-- Transfer Form -->
+                <form action="#transfer-success" method="get">
+                    <!-- Recipient Name -->
+                    <div class="form-group">
+                        <label for="recipient-name">Recipient Name</label>
+                        <input 
+                            type="text" 
+                            id="recipient-name" 
+                            name="recipient-name" 
+                            placeholder="Full name of recipient"
+                            required
+                        >
+                    </div>
+
+                    <!-- Recipient Email -->
+                    <div class="form-group">
+                        <label for="recipient-email">Recipient Email (Optional)</label>
+                        <input 
+                            type="email" 
+                            id="recipient-email" 
+                            name="recipient-email" 
+                            placeholder="recipient@example.com"
+                        >
+                        <small style="color: var(--neutral-light); display: block; margin-top: 0.5rem;">
+                            Email notification will be sent upon transfer completion
+                        </small>
+                    </div>
+
+                    <!-- Destination Country Selection -->
+                    <div class="form-group">
+                        <label for="destination-country">Destination Country</label>
+                        <select id="destination-country" name="destination-country" required>
+                            <option value="">Select destination country</option>
+                            <option value="us">🇺🇸 United States</option>
+                            <option value="uk">🇬🇧 United Kingdom</option>
+                            <option value="ca">🇨🇦 Canada</option>
+                            <option value="au">🇦🇺 Australia</option>
+                            <option value="de">🇩🇪 Germany</option>
+                            <option value="fr">🇫🇷 France</option>
+                            <option value="es">🇪🇸 Spain</option>
+                            <option value="it">🇮🇹 Italy</option>
+                            <option value="jp">🇯🇵 Japan</option>
+                            <option value="cn">🇨🇳 China</option>
+                            <option value="in">🇮🇳 India</option>
+                            <option value="br">🇧🇷 Brazil</option>
+                            <option value="mx">🇲🇽 Mexico</option>
+                            <option value="ar">🇦🇷 Argentina</option>
+                            <option value="za">🇿🇦 South Africa</option>
+                            <option value="ng">🇳🇬 Nigeria</option>
+                            <option value="kr">🇰🇷 South Korea</option>
+                            <option value="sg">🇸🇬 Singapore</option>
+                            <option value="ae">🇦🇪 UAE</option>
+                            <option value="sa">🇸🇦 Saudi Arabia</option>
+                        </select>
+                    </div>
+
+                    <!-- Transfer Amount -->
+                    <div class="form-group">
+                        <label for="amount">Transfer Amount (USD)</label>
+                        <input 
+                            type="number" 
+                            id="amount" 
+                            name="amount" 
+                            placeholder="0.00"
+                            min="1"
+                            max="10000"
+                            step="0.01"
+                            required
+                        >
+                        <small style="color: var(--neutral-light); display: block; margin-top: 0.5rem;">
+                            Maximum transfer: $10,000.00 | Available balance: $10,000.00
+                        </small>
+                    </div>
+
+                    <!-- Transfer Purpose -->
+                    <div class="form-group">
+                        <label for="purpose">Purpose of Transfer</label>
+                        <select id="purpose" name="purpose" required>
+                            <option value="">Select transfer purpose</option>
+                            <option value="family">Family Support</option>
+                            <option value="education">Education/Tuition</option>
+                            <option value="business">Business Payment</option>
+                            <option value="investment">Investment</option>
+                            <option value="personal">Personal</option>
+                            <option value="gift">Gift</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Message/Note -->
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="3"
+                            placeholder="Add a note for the recipient"
+                            style="resize: vertical;"
+                        ></textarea>
+                    </div>
+
+                    <!-- Security Notice -->
+                    <div class="tip-box">
+                        <strong>🔐 How Your Transfer is Protected:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li><strong>End-to-End Encryption:</strong> Your transaction data is encrypted from your device to our servers</li>
+                            <li><strong>Secure Processing:</strong> Multi-layer verification ensures funds reach the right recipient</li>
+                            <li><strong>Fraud Detection:</strong> AI-powered systems monitor for suspicious activity</li>
+                            <li><strong>Compliance:</strong> All transfers comply with international anti-money laundering regulations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="form-submit">
+                        🚀 Initiate Transfer
+                    </button>
+                </form>
+            </div>
+
+            <!-- Transfer Success Confirmation (Hidden by default, shown via URL hash) -->
+            <div id="transfer-success" style="display: none;">
+                <div class="transfer-container">
+                    <div class="confirmation-message">
+                        <h3>✅ Transfer Initiated Successfully!</h3>
+                        <p style="margin-top: 1rem;">
+                            Your virtual transfer has been processed. In a real system, this would trigger:
+                        </p>
+                        <ul style="text-align: left; margin: 1rem auto; max-width: 400px; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li>Immediate deduction from your account</li>
+                            <li>Currency conversion (if applicable)</li>
+                            <li>Compliance checks and verification</li>
+                            <li>Notification to recipient</li>
+                            <li>Transaction confirmation via email/SMS</li>
+                        </ul>
+                        
+                        <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="dashboard.html" class="btn btn-primary">
+                                <span>Back to Dashboard</span>
+                            </a>
+                            <a href="transfer.html" class="btn btn-secondary">
+                                <span>Send Another</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational Information -->
+            <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h2 class="section-title" style="font-size: 1.8rem;">How International Transfers Work</h2>
+                
+                <div class="feature-grid" style="margin-top: 2rem;">
+                    <!-- Step 1 -->
+                    <div class="feature-card">
+                        <span class="feature-icon">1️⃣</span>
+                        <h3>Initiation</h3>
+                        <p>
+                            You submit transfer details through a secure, encrypted form. 
+                            Your credentials are verified before proceeding.
+                        </p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="feature-card">
+                        <span class="feature-icon">2️⃣</span>
+                        <h3>Verification</h3>
+                        <p>
+                            The system performs compliance checks, verifies available funds, 
+                            and screens for fraud or suspicious activity.
+                        </p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="feature-card">
+                        <span class="feature-icon">3️⃣</span>
+                        <h3>Processing</h3>
+                        <p>
+                            Funds are converted (if needed), routed through international banking 
+                            networks (SWIFT/ACH), and delivered to the recipient.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Best Practices -->
+            <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="education-card">
+                    <h2 style="color: var(--primary-cyan); display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🛡️</span> Security Best Practices for Money Transfers
+                    </h2>
+                    
+                    <h3>Before You Send:</h3>
+                    <ul>
+                        <li>Verify the recipient's identity through multiple channels</li>
+                        <li>Double-check account numbers and routing information</li>
+                        <li>Ensure you're on the official website (check URL and HTTPS)</li>
+                        <li>Never transfer money based on unsolicited requests</li>
+                    </ul>
+                    
+                    <h3>During the Transfer:</h3>
+                    <ul>
+                        <li>Use a secure internet connection (avoid public Wi-Fi)</li>
+                        <li>Never share your password or 2FA codes</li>
+                        <li>Review all details carefully before confirming</li>
+                        <li>Save confirmation numbers and transaction IDs</li>
+                    </ul>
+                    
+                    <h3>After Sending:</h3>
+                    <ul>
+                        <li>Monitor your account for the deduction</li>
+                        <li>Keep records of all transfer documentation</li>
+                        <li>Verify the recipient received the funds</li>
+                        <li>Report any discrepancies immediately</li>
+                    </ul>
+                    
+                    <div class="warning-box" style="margin-top: 1.5rem;">
+                        <strong>🚨 Red Flags to Watch For:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li>Urgent requests for money transfers</li>
+                            <li>Requests to transfer to unfamiliar recipients</li>
+                            <li>Promises of large returns or rewards</li>
+                            <li>Pressure to act quickly without verification</li>
+                            <li>Requests to use unconventional transfer methods</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About SecureTransfer</h3>
+                    <p>
+                        An educational platform designed to teach cybersecurity concepts through 
+                        simulated international money transfers.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="transfer.html">Send Money</a></li>
+                        <li><a href="security.html">Security Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning Resources</h3>
+                    <ul>
+                        <li><a href="security.html#passwords">Password Security</a></li>
+                        <li><a href="security.html#phishing">Phishing Prevention</a></li>
+                        <li><a href="security.html#encryption">Encryption Basics</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 SecureTransfer Educational Platform. For learning purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple script to show success message when form is submitted -->
+    <script>
+        // Check if URL hash is #transfer-success
+        if (window.location.hash === '#transfer-success') {
+            document.querySelector('.transfer-container form').parentElement.style.display = 'none';
+            document.getElementById('transfer-success').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

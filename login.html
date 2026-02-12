@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to SecureTransfer - Educational platform">
+    <title>Login - SecureTransfer</title>
+    
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ================================
+         NAVIGATION BAR
+         ================================ -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-logo">SecureTransfer</a>
+            
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="security.html">Security</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================================
+         LOGIN FORM SECTION
+         Authentication form for users
+         Note: No real authentication happens
+         Links to dashboard on submit
+         ================================ -->
+    <section class="features">
+        <div class="container">
+            <!-- Educational Disclaimer -->
+            <div class="disclaimer">
+                <strong>📚 PRACTICE MODE</strong>
+                <p>
+                    This is a simulated login form. Click "Login" to access the demo dashboard. 
+                    Learn about secure authentication practices.
+                </p>
+            </div>
+
+            <!-- Login Form Container -->
+            <div class="form-container">
+                <!-- Form Title -->
+                <h2>Welcome Back</h2>
+                
+                <!-- Login Form -->
+                <form action="dashboard.html" method="get">
+                    <!-- Username/Email Field -->
+                    <div class="form-group">
+                        <label for="username">Username or Email</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Enter your username or email"
+                            required
+                        >
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+
+                    <!-- Remember Me & Forgot Password Row -->
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; margin: 0;">
+                            <input 
+                                type="checkbox" 
+                                id="remember" 
+                                name="remember"
+                                style="width: auto; cursor: pointer;"
+                            >
+                            <span>Remember me</span>
+                        </label>
+                        
+                        <a href="#" style="color: var(--primary-cyan); text-decoration: none; font-weight: 500;">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <!-- Security Notice -->
+                    <div class="tip-box">
+                        <strong>🔒 Security Notice:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            In a real application, your credentials would be verified against an encrypted 
+                            database. Never enter real passwords on educational platforms!
+                        </p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="form-submit">
+                        Login to Dashboard
+                    </button>
+                </form>
+
+                <!-- Footer Links -->
+                <div class="form-footer">
+                    <p>
+                        Don't have an account? 
+                        <a href="signup.html">Sign up for free</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Security Features Grid -->
+            <div style="max-width: 800px; margin: 3rem auto;">
+                <h2 class="section-title" style="font-size: 1.8rem;">How Secure Login Works</h2>
+                
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <!-- Feature 1: SSL/TLS -->
+                    <div class="feature-card" style="padding: 1.5rem;">
+                        <span class="feature-icon" style="font-size: 2rem;">🔐</span>
+                        <h3 style="font-size: 1.2rem;">SSL/TLS Encryption</h3>
+                        <p style="font-size: 0.95rem;">
+                            Your login credentials are encrypted during transmission using HTTPS, 
+                            preventing interception by attackers.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 2: Password Hashing -->
+                    <div class="feature-card" style="padding: 1.5rem;">
+                        <span class="feature-icon" style="font-size: 2rem;">🔑</span>
+                        <h3 style="font-size: 1.2rem;">Password Hashing</h3>
+                        <p style="font-size: 0.95rem;">
+                            Passwords are never stored in plain text. They're hashed using algorithms 
+                            like bcrypt or Argon2.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 3: Two-Factor Auth -->
+                    <div class="feature-card" style="padding: 1.5rem;">
+                        <span class="feature-icon" style="font-size: 2rem;">📱</span>
+                        <h3 style="font-size: 1.2rem;">Two-Factor Auth</h3>
+                        <p style="font-size: 0.95rem;">
+                            Additional layer of security requiring a second verification method 
+                            beyond just your password.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phishing Warning -->
+            <div style="max-width: 600px; margin: 2rem auto;">
+                <div class="warning-box">
+                    <strong>⚠️ Beware of Phishing Attempts!</strong>
+                    <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                        Always verify the URL before entering credentials. Real SecureTransfer will 
+                        never ask for your password via email. Learn more about phishing on our 
+                        <a href="security.html#phishing" style="color: var(--primary-cyan);">security page</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About SecureTransfer</h3>
+                    <p>
+                        An educational platform designed to teach cybersecurity concepts through 
+                        simulated international money transfers.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="security.html">Security Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning Resources</h3>
+                    <ul>
+                        <li><a href="security.html#passwords">Password Security</a></li>
+                        <li><a href="security.html#phishing">Phishing Prevention</a></li>
+                        <li><a href="security.html#encryption">Encryption Basics</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 SecureTransfer Educational Platform. For learning purposes only.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

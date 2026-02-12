@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn cybersecurity fundamentals - Password security, phishing prevention, and encryption">
+    <title>Security Education - SecureTransfer</title>
+    
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ================================
+         NAVIGATION BAR
+         ================================ -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="navbar-logo">SecureTransfer</a>
+            
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="security.html" class="active">Security</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================================
+         SECURITY EDUCATION SECTION
+         Comprehensive cybersecurity guide
+         ================================ -->
+    <section class="education-section">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="education-intro">
+                <h1>Cybersecurity Education Center</h1>
+                <p>
+                    Learn essential cybersecurity concepts to protect yourself in the digital world. 
+                    This guide covers password security, phishing prevention, and encryption fundamentals.
+                </p>
+            </div>
+
+            <!-- Education Content Grid -->
+            <div class="education-grid">
+                
+                <!-- ================================
+                     PASSWORD SECURITY SECTION
+                     ================================ -->
+                <div class="education-card" id="passwords">
+                    <h2>🔑 Password Security</h2>
+                    
+                    <p>
+                        Passwords are the first line of defense for your online accounts. Understanding 
+                        how to create and manage strong passwords is crucial for protecting your financial 
+                        and personal information.
+                    </p>
+                    
+                    <h3>Why Strong Passwords Matter</h3>
+                    <p>
+                        Weak passwords are the leading cause of security breaches. Attackers use sophisticated 
+                        tools that can test millions of password combinations per second. A strong password 
+                        significantly increases the time and resources needed to crack your account.
+                    </p>
+                    
+                    <h3>Characteristics of Strong Passwords</h3>
+                    <ul>
+                        <li><strong>Length:</strong> At least 12-16 characters (longer is better)</li>
+                        <li><strong>Complexity:</strong> Mix of uppercase, lowercase, numbers, and symbols</li>
+                        <li><strong>Unpredictability:</strong> Avoid dictionary words, personal information, or common patterns</li>
+                        <li><strong>Uniqueness:</strong> Different password for each account</li>
+                    </ul>
+                    
+                    <div class="warning-box">
+                        <strong>❌ Weak Password Examples:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li><code>password123</code> - Too common and predictable</li>
+                            <li><code>JohnSmith1990</code> - Contains personal information</li>
+                            <li><code>qwerty</code> - Keyboard pattern</li>
+                            <li><code>admin</code> - Default/common term</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <strong>✅ Strong Password Examples:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li><code>T7$mP9#kL2@nX5</code> - Random characters</li>
+                            <li><code>Correct-Horse-Battery-Staple-92!</code> - Passphrase method</li>
+                            <li><code>W3lc0m3!T0$ecur1ty</code> - Substitution and symbols</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Password Creation Strategies</h3>
+                    
+                    <h4>1. Passphrase Method</h4>
+                    <p>
+                        Use a memorable phrase with random words. Example: "Blue-Elephant-Dances-Under-Moon-77"
+                        This is long, easy to remember, and hard to crack.
+                    </p>
+                    
+                    <h4>2. Character Substitution</h4>
+                    <p>
+                        Replace letters with numbers/symbols: "Security" becomes "S3cur!ty@2024"
+                    </p>
+                    
+                    <h4>3. Password Manager (Recommended)</h4>
+                    <p>
+                        Use a password manager to generate and store complex, unique passwords for each account. 
+                        You only need to remember one master password.
+                    </p>
+                    
+                    <h3>Password Hashing: How Your Password is Stored</h3>
+                    <p>
+                        When you create an account, your password should NEVER be stored in plain text. 
+                        Instead, it's converted into a "hash" - a one-way cryptographic function.
+                    </p>
+                    
+                    <div class="tip-box">
+                        <strong>How Hashing Works:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            <strong>Input:</strong> MySecurePassword123!<br>
+                            <strong>Hash (bcrypt):</strong> $2a$12$KIXxRVVNOp.fK3y5I5FvMO8nHqX...<br><br>
+                            
+                            Even if attackers steal the database, they cannot reverse the hash to get your 
+                            original password. Modern algorithms like bcrypt, Argon2, and scrypt include 
+                            "salting" to prevent rainbow table attacks.
+                        </p>
+                    </div>
+                    
+                    <h3>Two-Factor Authentication (2FA)</h3>
+                    <p>
+                        2FA adds an extra layer of security by requiring two forms of verification:
+                    </p>
+                    <ul>
+                        <li><strong>Something you know:</strong> Your password</li>
+                        <li><strong>Something you have:</strong> Phone, security key, or authenticator app</li>
+                    </ul>
+                    
+                    <p>
+                        Even if someone steals your password, they cannot access your account without 
+                        the second factor. Always enable 2FA on financial accounts, email, and social media.
+                    </p>
+                    
+                    <div class="tip-box">
+                        <strong>Best 2FA Methods (in order of security):</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li>1. Hardware security keys (YubiKey, Titan Key)</li>
+                            <li>2. Authenticator apps (Google Authenticator, Authy)</li>
+                            <li>3. SMS codes (better than nothing, but vulnerable to SIM swapping)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Password Best Practices</h3>
+                    <ul>
+                        <li>Change passwords immediately if you suspect a breach</li>
+                        <li>Never share passwords via email, text, or phone</li>
+                        <li>Don't write passwords on paper or sticky notes</li>
+                        <li>Use different passwords for different accounts</li>
+                        <li>Avoid logging in on public/shared computers</li>
+                        <li>Check for HTTPS before entering credentials</li>
+                    </ul>
+                </div>
+                
+                <!-- ================================
+                     PHISHING PREVENTION SECTION
+                     ================================ -->
+                <div class="education-card" id="phishing">
+                    <h2>🎣 Phishing Prevention</h2>
+                    
+                    <p>
+                        Phishing is a social engineering attack where criminals impersonate legitimate 
+                        organizations to steal your personal information, login credentials, or money. 
+                        It's one of the most common cybersecurity threats.
+                    </p>
+                    
+                    <h3>What is Phishing?</h3>
+                    <p>
+                        Phishing attacks typically arrive via email, text message (smishing), or phone 
+                        calls (vishing). Attackers create fake websites or messages that look legitimate 
+                        to trick you into revealing sensitive information.
+                    </p>
+                    
+                    <div class="warning-box">
+                        <strong>⚠️ Common Phishing Scenarios:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li>"Your account has been compromised! Click here to verify immediately"</li>
+                            <li>"You've won a prize! Enter your banking details to claim it"</li>
+                            <li>"Urgent: Your package is being held. Update payment information"</li>
+                            <li>"IRS/Tax Authority: You owe money. Pay now to avoid legal action"</li>
+                            <li>"IT Department: We need your password to fix a system issue"</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>How to Identify Phishing Attempts</h3>
+                    
+                    <h4>1. Check the Sender's Email Address</h4>
+                    <p>
+                        Legitimate companies use official domain names. Be suspicious of:
+                    </p>
+                    <ul>
+                        <li>Misspellings: <code>paypa1.com</code> instead of <code>paypal.com</code></li>
+                        <li>Generic domains: <code>bank-security@gmail.com</code></li>
+                        <li>Random characters: <code>support-xj32k@legitimate-bank.ru</code></li>
+                    </ul>
+                    
+                    <h4>2. Examine the URL Before Clicking</h4>
+                    <p>
+                        Hover over links (don't click!) to see the actual destination. Phishing URLs often:
+                    </p>
+                    <ul>
+                        <li>Use HTTP instead of HTTPS</li>
+                        <li>Contain misspellings or extra words</li>
+                        <li>Use IP addresses instead of domain names</li>
+                        <li>Have unusual top-level domains (.ru, .tk, .xyz)</li>
+                    </ul>
+                    
+                    <div class="tip-box">
+                        <strong>URL Comparison:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            <strong style="color: var(--accent-green);">✅ Legitimate:</strong> 
+                            <code>https://www.yourbank.com/login</code><br>
+                            
+                            <strong style="color: var(--accent-orange);">❌ Phishing:</strong> 
+                            <code>http://www.yourbank-security.tk/login.php</code>
+                        </p>
+                    </div>
+                    
+                    <h4>3. Look for Urgency and Threats</h4>
+                    <p>
+                        Phishing emails create artificial urgency to bypass your critical thinking:
+                    </p>
+                    <ul>
+                        <li>"Act within 24 hours or your account will be closed!"</li>
+                        <li>"Immediate action required!"</li>
+                        <li>"You will be charged if you don't respond"</li>
+                    </ul>
+                    
+                    <h4>4. Check for Poor Grammar and Spelling</h4>
+                    <p>
+                        Legitimate companies have professional communications. Be wary of:
+                    </p>
+                    <ul>
+                        <li>Spelling mistakes and typos</li>
+                        <li>Awkward phrasing or grammar errors</li>
+                        <li>Generic greetings ("Dear Customer" instead of your name)</li>
+                    </ul>
+                    
+                    <h4>5. Verify Unexpected Requests</h4>
+                    <p>
+                        Legitimate organizations will NEVER:
+                    </p>
+                    <ul>
+                        <li>Ask for your password via email or phone</li>
+                        <li>Request sensitive information through unsecured channels</li>
+                        <li>Demand immediate payment via wire transfer or gift cards</li>
+                        <li>Threaten legal action for non-payment without prior notice</li>
+                    </ul>
+                    
+                    <h3>Types of Phishing Attacks</h3>
+                    
+                    <h4>Email Phishing</h4>
+                    <p>
+                        Mass emails sent to thousands of people hoping some will fall for the scam.
+                    </p>
+                    
+                    <h4>Spear Phishing</h4>
+                    <p>
+                        Targeted attacks against specific individuals or organizations, often using 
+                        personal information gathered from social media to appear legitimate.
+                    </p>
+                    
+                    <h4>Whaling</h4>
+                    <p>
+                        Attacks targeting high-profile individuals like executives or celebrities, 
+                        often involving large financial requests.
+                    </p>
+                    
+                    <h4>Smishing (SMS Phishing)</h4>
+                    <p>
+                        Phishing via text message, often claiming to be from banks, delivery services, 
+                        or government agencies.
+                    </p>
+                    
+                    <h4>Vishing (Voice Phishing)</h4>
+                    <p>
+                        Phone calls from scammers impersonating tech support, banks, or government 
+                        officials.
+                    </p>
+                    
+                    <h3>What to Do if You Receive a Phishing Attempt</h3>
+                    <ul>
+                        <li><strong>Don't click any links</strong> or download attachments</li>
+                        <li><strong>Don't reply</strong> to the message</li>
+                        <li><strong>Verify independently:</strong> Contact the organization directly using official contact information</li>
+                        <li><strong>Report it:</strong> Forward to the legitimate organization and your email provider</li>
+                        <li><strong>Delete the message</strong> after reporting</li>
+                    </ul>
+                    
+                    <h3>What to Do if You've Been Phished</h3>
+                    <div class="warning-box">
+                        <strong>Immediate Actions:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li>Change passwords for affected accounts immediately</li>
+                            <li>Enable two-factor authentication if not already active</li>
+                            <li>Contact your bank/credit card company if financial info was compromised</li>
+                            <li>Monitor your accounts for suspicious activity</li>
+                            <li>Run antivirus/antimalware scans on your device</li>
+                            <li>Consider placing a fraud alert on your credit report</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <strong>Prevention Tips:</strong>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--neutral-light);">
+                            <li>Think before you click - take time to verify suspicious messages</li>
+                            <li>Type URLs directly instead of clicking email links</li>
+                            <li>Use email filters and spam detection</li>
+                            <li>Keep software and browsers updated</li>
+                            <li>Educate yourself on current phishing tactics</li>
+                            <li>Trust your instincts - if something feels off, it probably is</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- ================================
+                     ENCRYPTION BASICS SECTION
+                     ================================ -->
+                <div class="education-card" id="encryption">
+                    <h2>🔐 Encryption Basics</h2>
+                    
+                    <p>
+                        Encryption is the process of converting readable data (plaintext) into an 
+                        unreadable format (ciphertext) to protect it from unauthorized access. It's 
+                        the foundation of secure communication in the digital age.
+                    </p>
+                    
+                    <h3>Why Encryption Matters</h3>
+                    <p>
+                        Every time you send a message, make a purchase online, or access your bank account, 
+                        encryption protects your data from:
+                    </p>
+                    <ul>
+                        <li>Hackers intercepting your communications</li>
+                        <li>Data breaches exposing sensitive information</li>
+                        <li>Identity theft and fraud</li>
+                        <li>Unauthorized surveillance</li>
+                    </ul>
+                    
+                    <h3>How Encryption Works</h3>
+                    <p>
+                        Encryption uses mathematical algorithms and keys to scramble data. Only someone 
+                        with the correct decryption key can convert the ciphertext back to plaintext.
+                    </p>
+                    
+                    <div class="tip-box">
+                        <strong>Simple Example:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            <strong>Plaintext:</strong> "Transfer $500 to Account 12345"<br>
+                            <strong>Encrypted:</strong> "aX9kL#mP2@vN7$qT4%wR8^yU3&zI5"<br>
+                            <strong>After Decryption:</strong> "Transfer $500 to Account 12345"<br><br>
+                            
+                            Without the decryption key, the encrypted message is meaningless to attackers.
+                        </p>
+                    </div>
+                    
+                    <h3>Types of Encryption</h3>
+                    
+                    <h4>1. Symmetric Encryption</h4>
+                    <p>
+                        Uses the same key for both encryption and decryption. Fast and efficient, 
+                        but requires secure key exchange.
+                    </p>
+                    <ul>
+                        <li><strong>Examples:</strong> AES (Advanced Encryption Standard), DES, 3DES</li>
+                        <li><strong>Use Case:</strong> Encrypting files, databases, disk drives</li>
+                    </ul>
+                    
+                    <h4>2. Asymmetric Encryption (Public-Key Cryptography)</h4>
+                    <p>
+                        Uses two keys: a public key for encryption and a private key for decryption. 
+                        The public key can be shared openly, but the private key must remain secret.
+                    </p>
+                    <ul>
+                        <li><strong>Examples:</strong> RSA, ECC (Elliptic Curve Cryptography)</li>
+                        <li><strong>Use Case:</strong> Secure email, digital signatures, SSL/TLS certificates</li>
+                    </ul>
+                    
+                    <div class="tip-box">
+                        <strong>How Asymmetric Encryption Works:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            1. Alice wants to send a secure message to Bob<br>
+                            2. Alice encrypts the message using Bob's public key<br>
+                            3. Only Bob's private key can decrypt the message<br>
+                            4. Even if the encrypted message is intercepted, it cannot be read without Bob's private key
+                        </p>
+                    </div>
+                    
+                    <h3>SSL/TLS: Encryption for Web Browsing</h3>
+                    <p>
+                        SSL (Secure Sockets Layer) and its successor TLS (Transport Layer Security) 
+                        encrypt data transmitted between your browser and websites. Look for HTTPS in 
+                        the URL and a padlock icon.
+                    </p>
+                    
+                    <h4>How HTTPS Protects You:</h4>
+                    <ul>
+                        <li><strong>Authentication:</strong> Verifies you're connecting to the legitimate website</li>
+                        <li><strong>Encryption:</strong> Scrambles data so it can't be read if intercepted</li>
+                        <li><strong>Integrity:</strong> Ensures data isn't modified during transmission</li>
+                    </ul>
+                    
+                    <div class="warning-box">
+                        <strong>⚠️ HTTP vs HTTPS:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            <strong style="color: var(--accent-orange);">HTTP:</strong> Unencrypted - 
+                            Anyone can intercept and read your data<br>
+                            
+                            <strong style="color: var(--accent-green);">HTTPS:</strong> Encrypted - 
+                            Your data is protected from eavesdroppers<br><br>
+                            
+                            NEVER enter passwords, credit card numbers, or personal information on 
+                            HTTP websites!
+                        </p>
+                    </div>
+                    
+                    <h3>End-to-End Encryption (E2EE)</h3>
+                    <p>
+                        E2EE ensures that only the sender and recipient can read messages - not even 
+                        the service provider. This is used in messaging apps like Signal, WhatsApp, 
+                        and iMessage.
+                    </p>
+                    
+                    <h4>How E2EE Works:</h4>
+                    <ul>
+                        <li>Messages are encrypted on your device</li>
+                        <li>They remain encrypted during transmission</li>
+                        <li>Only the recipient's device can decrypt them</li>
+                        <li>The service provider cannot access message contents</li>
+                    </ul>
+                    
+                    <h3>Encryption in Financial Transactions</h3>
+                    <p>
+                        When you make online payments or transfers, multiple layers of encryption protect 
+                        your financial data:
+                    </p>
+                    
+                    <h4>1. Transport Layer (HTTPS/TLS)</h4>
+                    <p>
+                        Encrypts data between your browser and the payment processor.
+                    </p>
+                    
+                    <h4>2. Application Layer</h4>
+                    <p>
+                        Additional encryption within the application before transmission.
+                    </p>
+                    
+                    <h4>3. Database Encryption</h4>
+                    <p>
+                        Your financial data is encrypted when stored in databases.
+                    </p>
+                    
+                    <h4>4. Tokenization</h4>
+                    <p>
+                        Replaces sensitive data (like credit card numbers) with non-sensitive tokens.
+                    </p>
+                    
+                    <h3>Encryption Best Practices</h3>
+                    <ul>
+                        <li><strong>Always use HTTPS:</strong> Check for the padlock icon before entering sensitive data</li>
+                        <li><strong>Enable encryption:</strong> Turn on device encryption (BitLocker, FileVault)</li>
+                        <li><strong>Use encrypted messaging:</strong> Choose apps with end-to-end encryption</li>
+                        <li><strong>Encrypt backups:</strong> Ensure cloud and local backups are encrypted</li>
+                        <li><strong>VPN for public Wi-Fi:</strong> Use a VPN to encrypt your connection on untrusted networks</li>
+                        <li><strong>Keep software updated:</strong> Updates often include encryption improvements</li>
+                    </ul>
+                    
+                    <div class="tip-box">
+                        <strong>Fun Fact:</strong>
+                        <p style="margin-top: 0.5rem; color: var(--neutral-light);">
+                            Modern encryption is so strong that it would take the world's fastest 
+                            supercomputer billions of years to crack a single 256-bit AES encrypted 
+                            message through brute force!
+                        </p>
+                    </div>
+                    
+                    <h3>The Future of Encryption</h3>
+                    <p>
+                        As computing power increases, encryption must evolve:
+                    </p>
+                    <ul>
+                        <li><strong>Quantum-Resistant Encryption:</strong> Developing algorithms that can withstand quantum computers</li>
+                        <li><strong>Homomorphic Encryption:</strong> Performing computations on encrypted data without decrypting it</li>
+                        <li><strong>Post-Quantum Cryptography:</strong> New standards being developed by NIST for the quantum era</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Summary and Call to Action -->
+            <div style="margin-top: 3rem; text-align: center;">
+                <div class="feature-card" style="max-width: 800px; margin: 0 auto;">
+                    <span class="feature-icon">🎓</span>
+                    <h2 style="color: var(--primary-cyan);">Continue Your Learning Journey</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Cybersecurity is an ongoing practice, not a one-time effort. Stay informed about 
+                        new threats, regularly update your security practices, and always think critically 
+                        about your digital interactions.
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                        <a href="signup.html" class="btn btn-primary">
+                            <span>Practice with Demo Account</span>
+                        </a>
+                        <a href="../index.html" class="btn btn-secondary">
+                            <span>Back to Home</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About SecureTransfer</h3>
+                    <p>
+                        An educational platform designed to teach cybersecurity concepts through 
+                        simulated international money transfers.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="security.html">Security Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Learning Resources</h3>
+                    <ul>
+                        <li><a href="#passwords">Password Security</a></li>
+                        <li><a href="#phishing">Phishing Prevention</a></li>
+                        <li><a href="#encryption">Encryption Basics</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 SecureTransfer Educational Platform. For learning purposes only.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
